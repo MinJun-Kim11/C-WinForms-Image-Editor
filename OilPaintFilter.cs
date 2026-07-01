@@ -156,7 +156,7 @@ namespace Photo
                 r = Clamp255(r);
             }
 
-            // 이 파일의 핵심 동작을 수행하는 메서드.
+            // 주변 픽셀의 색상 빈도를 기준으로 유화 효과 색상 선택
             private static double Clamp255(double v)
             {
                 if (v < 0.0) return 0.0;
