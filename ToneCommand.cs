@@ -22,7 +22,7 @@ namespace Photo
             private readonly ToneMode mode;
             private readonly double strength;
 
-            // 이 파일의 핵심 동작을 수행하는 메서드.
+            // Tone 필터 명령 실행
             public ToneCommand(Main mainForm, ToneMode mode, double strength = 0.18)
                 : base(mainForm)
             {
