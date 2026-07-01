@@ -213,7 +213,7 @@ namespace Photo
                 k = Clamp01(k);
             }
 
-            // 이 파일의 핵심 동작을 수행하는 메서드.
+            // 하프톤 점 크기를 기준으로 채널별 색상 적용 여부 계산
             private static void Rotate(double x, double y, double angleRad, out double rx, out double ry)
             {
                 double ca = Math.Cos(angleRad);
@@ -223,13 +223,13 @@ namespace Photo
                 ry = x * sa + y * ca;
             }
 
-            // 이 파일의 핵심 동작을 수행하는 메서드.
+            // 각도값을 라디안 단위로 변환
             private static double DegToRad(double deg)
             {
                 return deg * PI / 180.0;
             }
 
-            // 이 파일의 핵심 동작을 수행하는 메서드.
+            // 픽셀 좌표를 지정된 각도만큼 회전 변환
             private static double Mod(double x, double m)
             {
                 double r = x % m;
@@ -246,7 +246,7 @@ namespace Photo
                 return a + (b - a) * t;
             }
 
-            // 이 파일의 핵심 동작을 수행하는 메서드.
+            // 필터 결과값을 0~255 범위로 제한
             private static double Clamp01(double v)
             {
                 if (v < 0.0) return 0.0;
