@@ -19,7 +19,7 @@ namespace Photo
         /// </summary>
         internal sealed class SketchCommand : ImageCommandBase
         {
-            // 이 파일의 핵심 동작을 수행하는 메서드.
+            // Sketch 필터 명령 실행
             public SketchCommand(Main mainForm)
                 : base(mainForm)
             {
