@@ -220,7 +220,7 @@ namespace Photo
                 return (disc * 0.72 + ring * 0.38) * amp;
             }
 
-            // 이 파일의 핵심 동작을 수행하는 메서드.
+            // 광원 위치와 거리 기반으로 플레어 효과 계산
             private static bool TryGetMaskCentroid(byte[] mask, int width, int height, out double cx, out double cy, out double avgStrength)
             {
                 double sumX = 0.0;
@@ -255,7 +255,7 @@ namespace Photo
                 return true;
             }
 
-            // 이 파일의 핵심 동작을 수행하는 메서드.
+            // 필터 결과값을 0~255 범위로 제한
             private static double Clamp255(double v)
             {
                 if (v < 0.0) return 0.0;
