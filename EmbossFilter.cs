@@ -187,7 +187,7 @@ namespace Photo
                 return mix;
             }
 
-            // 이 파일의 핵심 동작을 수행하는 메서드.
+            // 픽셀 주변 밝기 차이를 이용해 입체 명암값 계산
             private static void GaussianBlur(double[] src, double[] dst, int width, int height, double sigma)
             {
                 int radius = Math.Max(1, (int)Math.Ceiling(3.0 * sigma));
@@ -244,7 +244,7 @@ namespace Photo
                 }
             }
 
-            // 이 파일의 핵심 동작을 수행하는 메서드.
+            // RGB 값을 기준으로 픽셀 밝기 계산
             private static void Normalize(ref double x, ref double y, ref double z)
             {
                 double len = Math.Sqrt(x * x + y * y + z * z);
@@ -270,7 +270,7 @@ namespace Photo
                 return a + (b - a) * t;
             }
 
-            // 이 파일의 핵심 동작을 수행하는 메서드.
+            // 필터 결과값을 0~255 범위로 제한
             private static byte ClampByte(double v)
             {
                 int iv = (int)Math.Round(v);
