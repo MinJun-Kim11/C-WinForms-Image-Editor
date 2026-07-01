@@ -129,7 +129,7 @@ namespace Photo
                                 double g = orig[1] * (1.0 - blurBlend) + blur[1] * blurBlend;
                                 double r = orig[2] * (1.0 - blurBlend) + blur[2] * blurBlend;
 
-                                // glow 추가
+                                // 원본 픽셀에 발광 효과를 합성
                                 b += glow[0] * glowStrength;
                                 g += glow[1] * glowStrength;
                                 r += glow[2] * glowStrength;
