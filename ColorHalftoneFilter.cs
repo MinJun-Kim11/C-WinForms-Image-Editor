@@ -170,7 +170,7 @@ namespace Photo
                 return Clamp01(total / count);
             }
 
-            // 이 파일의 핵심 동작을 수행하는 메서드.
+            // 픽셀 위치를 기준으로 하프톤 셀 중심 좌표 계산
             private static double SmoothDisk(double dist, double radius, double aaWidth)
             {
                 double inner = radius - aaWidth * 0.5;
