@@ -293,7 +293,7 @@ namespace Photo
                 return a + (b - a) * t;
             }
 
-            // 이 파일의 핵심 동작을 수행하는 메서드.
+            // 필터 결과값을 0~255 범위로 제한
             private static double SmoothStep(double edge0, double edge1, double x)
             {
                 if (edge1 <= edge0)
