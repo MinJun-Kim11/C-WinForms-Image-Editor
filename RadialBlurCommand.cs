@@ -22,7 +22,7 @@ namespace Photo
             private readonly int sampleCount;
             private readonly double strength;
 
-            // 이 파일의 핵심 동작을 수행하는 메서드.
+            // Radial Blur 필터 명령 실행
             public RadialBlurCommand(Main mainForm, int sampleCount, double strength)
                 : base(mainForm)
             {
