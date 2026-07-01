@@ -132,7 +132,7 @@ namespace Photo
                 }
             }
 
-            // 이 파일의 핵심 동작을 수행하는 메서드.
+            // Gaussian 커널을 생성하고 정규화
             static double[] CreateGaussianKernel1D(int kernelSize, double sigma)
             {
                 int r = kernelSize / 2;
@@ -157,7 +157,7 @@ namespace Photo
                 return k;
             }
 
-            // 이 파일의 핵심 동작을 수행하는 메서드.
+            // 필터 결과값을 0~255 범위로 제한
             static byte ToByte(double v)
             {
                 int iv = (int)Math.Round(v);
