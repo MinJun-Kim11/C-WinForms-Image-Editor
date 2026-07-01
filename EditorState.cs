@@ -12,7 +12,6 @@ using System.Threading.Tasks;
 
 namespace Photo
 {
-    // 메인 편집 창과 공통 편집 상태를 관리하는 핵심 폼 클래스.
     public partial class Main
     {
         //공통 상태 구조(이미지 + 마스크 한 세트를 저장함)
