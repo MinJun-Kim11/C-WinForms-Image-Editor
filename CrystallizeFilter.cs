@@ -283,7 +283,7 @@ namespace Photo
                 }
             }
 
-            // 이 파일의 핵심 동작을 수행하는 메서드.
+            // 픽셀 위치에 대응하는 결정 셀 중심점 탐색
             private static double Hash01(int x, int y, int seed)
             {
                 unchecked
@@ -306,7 +306,7 @@ namespace Photo
                 return a + (b - a) * t;
             }
 
-            // 이 파일의 핵심 동작을 수행하는 메서드.
+            // 좌표값이 이미지 범위를 벗어나지 않도록 제한
             private static double Clamp01(double v)
             {
                 if (v < 0.0) return 0.0;
@@ -314,7 +314,7 @@ namespace Photo
                 return v;
             }
 
-            // 이 파일의 핵심 동작을 수행하는 메서드.
+            // 필터 결과값을 0~255 범위로 제한
             private static double SmoothStep(double edge0, double edge1, double x)
             {
                 if (edge1 <= edge0) return x >= edge1 ? 1.0 : 0.0;
