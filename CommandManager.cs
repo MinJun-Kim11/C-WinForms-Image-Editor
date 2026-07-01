@@ -12,7 +12,6 @@ using Photo.Commands;
 
 namespace Photo
 {
-    // 메인 편집 창과 공통 편집 상태를 관리하는 핵심 폼 클래스.
     public partial class Main
     {
         // 명령 실행과 Undo/Redo 스택 관리를 담당하는 관리자 클래스.
