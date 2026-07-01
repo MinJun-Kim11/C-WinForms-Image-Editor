@@ -22,7 +22,7 @@ namespace Photo
             private readonly int kernelSize;
             private readonly double sigma;
 
-            // 이 파일의 핵심 동작을 수행하는 메서드.
+            // Gaussian Blur 필터 명령 실행
             public GaussianBlurCommand(Main mainForm, int kernelSize, double sigma)
                 : base(mainForm)
             {
