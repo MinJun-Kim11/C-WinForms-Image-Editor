@@ -194,7 +194,7 @@ namespace Photo
                 }
             }
 
-            // 이 파일의 핵심 동작을 수행하는 메서드.
+            // 주변 픽셀과의 밝기 차이를 이용해 윤곽선 강도 계산
             private static void Gaussian3x3(double[] src, double[] dst, int width, int height)
             {
                 // 1 2 1
@@ -228,7 +228,7 @@ namespace Photo
                 }
             }
 
-            // 이 파일의 핵심 동작을 수행하는 메서드.
+            // 필터 결과값을 0~255 범위로 제한
             private static double SmoothStep01(double x)
             {
                 if (x <= 0.0) return 0.0;
