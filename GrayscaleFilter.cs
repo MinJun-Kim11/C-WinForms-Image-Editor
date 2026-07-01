@@ -11,7 +11,6 @@ using System.Threading.Tasks;
 
 namespace Photo
 {
-     // 메인 편집 창과 공통 편집 상태를 관리하는 핵심 폼 클래스.
      public partial class Main
     {
         /// <summary>
