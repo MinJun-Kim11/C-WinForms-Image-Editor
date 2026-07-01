@@ -279,7 +279,7 @@ namespace Photo
                 }
             }
 
-            // 이 파일의 핵심 동작을 수행하는 메서드.
+            // 바람 방향과 강도에 따라 픽셀 번짐 효과 계산
             private static double Hash01(int x, int y, int seed)
             {
                 unchecked
