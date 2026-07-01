@@ -165,7 +165,7 @@ namespace Photo
                 }
             }
 
-            // 이 파일의 핵심 동작을 수행하는 메서드.
+            // 원본과 블러 이미지의 차이를 이용해 선명화 값 계산
             static byte Lerp(double a, double b, double t)
             {
                 double v = a + (b - a) * t;
