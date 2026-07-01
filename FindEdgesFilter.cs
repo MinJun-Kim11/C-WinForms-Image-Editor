@@ -166,7 +166,7 @@ namespace Photo
                             // 중간 영역을 더 자연스럽게
                             e = Math.Pow(e, gamma);
 
-                            // 아주 약간 추가 소프트닝
+                            // 경계가 지나치게 날카로워지는 것을 줄이기 위한 약한 소프트닝 처리
                             e = SmoothStep01(e);
 
                             double v;
