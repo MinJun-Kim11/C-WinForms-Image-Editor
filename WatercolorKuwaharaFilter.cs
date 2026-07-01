@@ -154,14 +154,14 @@ namespace Photo
                 r = Clamp255(r);
             }
 
-            // 이 파일의 핵심 동작을 수행하는 메서드.
+            // 주변 영역의 분산을 비교해 수채화 효과 색상 선택
             private static double Quantize(double value, int levels)
             {
                 double step = 255.0 / (levels - 1);
                 return Math.Round(value / step) * step;
             }
 
-            // 이 파일의 핵심 동작을 수행하는 메서드.
+            // 필터 결과값을 0~255 범위로 제한
             private static double Clamp255(double v)
             {
                 if (v < 0.0) return 0.0;
