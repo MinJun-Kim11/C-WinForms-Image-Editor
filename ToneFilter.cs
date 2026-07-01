@@ -69,7 +69,7 @@ namespace Photo
                 }
             }
 
-            // 이 파일의 핵심 동작을 수행하는 메서드.
+            // 선택한 톤 설정에 따라 RGB 채널값 보정
             private static double Clamp255(double v)
             {
                 if (v < 0.0) return 0.0;
