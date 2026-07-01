@@ -19,7 +19,7 @@ namespace Photo
         /// </summary>
         internal sealed class GrayscaleCommand : ImageCommandBase
         {
-            // 이 파일의 핵심 동작을 수행하는 메서드.
+            // Grayscale 필터 명령 실행
             public GrayscaleCommand(Main mainForm)
                 : base(mainForm)
             {
