@@ -255,7 +255,7 @@ namespace Photo
                 a = p00[3] * w00 + p10[3] * w10 + p01[3] * w01 + p11[3] * w11;
             }
 
-            // 이 파일의 핵심 동작을 수행하는 메서드.
+            // 왜곡 후 좌표의 픽셀 색상을 보간하여 계산
             private static byte ClampToByte(double v)
             {
                 if (v < 0.0) return 0;
